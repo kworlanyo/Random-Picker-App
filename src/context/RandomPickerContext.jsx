@@ -45,8 +45,7 @@ function reducer(currentState, action) {
     }
 
     case "PICK": {
-      const randomIndex = Math.floor(Math.random() * currentState.items.length);
-      const randomItem = currentState.items[randomIndex];
+      const randomItem = currentState.items[generateRandomNum(currentState.items)];
       return {
         ...currentState,
         pickedUp: randomItem,
@@ -54,8 +53,7 @@ function reducer(currentState, action) {
     }
 
     case "PICK-GIF": {
-      const randomIndex = Math.floor(Math.random() * currentState.gifImages.length);
-      const randomGif = currentState.gifImages[randomIndex];
+      const randomGif = currentState.gifImages[generateRandomNum(currentState.gifImages)];
       return {
         ...currentState,
         pickedUpGif: randomGif,
@@ -68,6 +66,11 @@ function reducer(currentState, action) {
     default:
       return currentState;
   }
+}
+
+function generateRandomNum(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return randomIndex;
 }
 
 function RandomPickerContextProvider({ children }) {

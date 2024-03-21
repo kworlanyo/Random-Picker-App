@@ -15,7 +15,7 @@ function RandomPicker() {
       const intervalId = setInterval(() => {
         dispatch({ type: "PICK" });
         dispatch({ type: "PICK-GIF" });
-      });
+      }, 100);
 
       const time = setTimeout(() => {
         clearInterval(intervalId);
