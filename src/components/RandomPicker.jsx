@@ -47,10 +47,12 @@ function RandomPicker() {
         ))}
       </div>
       <div className="buttons-container">
-        <button disabled={state.isPlaying} onClick={handlePlay}>
+        <button className="first" disabled={state.isPlaying} onClick={handlePlay}>
           {state.isPlaying ? "Playing..." : "Play"}
         </button>
-        <button onClick={handleReset}>Reset</button>
+        <button className="second" onClick={handleReset}>
+          Reset
+        </button>
       </div>
       <div className="image-container">
         {state.pickedUpGif ? (

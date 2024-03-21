@@ -73,6 +73,23 @@ form input, button {
 
 button {
   cursor: pointer;
+  
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.first {
+  background-color: rgb(28, 128, 28);
+  border: none;
+  color: white;
+}
+
+.second {
+  background-color: #962424;
+  border: none;
+  color: white;
 }
 
 .image-container {
